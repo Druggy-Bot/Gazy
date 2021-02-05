@@ -111,34 +111,7 @@ const unknow2 = new Discord.MessageEmbed()
 //End Of Embeds
     logs.send(unknow2)
 });
-    client.on('voiceStateUpdate', async (oldMember, newMember) => {
-       let guild = oldMember.guild
-          let logs = guild.channels.cache.find((channel) => channel.name.toLowerCase() === `modlogs`)
-       let newUserChannel = newMember.channel;
-       let oldUserChannel = oldMember.channel;
-      //ModLogsEmbeds (voice)
-const unknow3 = new Discord.MessageEmbed()
- .setThumbnail(guild.iconURL({dynamic : true}))
-.setTitle("Voice Joined!")
-.setColor("RED")
-.setDescription(`${newMember.username} joined ${newUserChannel}`)
-const unknow4 = new Discord.MessageEmbed()
- .setThumbnail(guild.iconURL({dynamic : true}))
-.setTitle("Voice Left!")
-.setColor("RED")
-.setDescription(`${oldMember.username} left ${oldUserChannel}`)
-//End Of Embeds
 
-
-       if(newUserChannel) 
-       { 
-      await     logs.send(unknow3)
-       }
-       else{
-          
-      await     logs.send(unknow4)
-       }
-    });
    
 
    client.on('guildBanAdd', async (guild, user) => {
