@@ -1,0 +1,2 @@
+# Gazy
+Discord bot.
