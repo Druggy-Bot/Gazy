@@ -1,7 +1,6 @@
 //Function for even anything to work!
 const Discord = require('discord.js');
 const client = new Discord.Client()
-const keepAlive = require("./server.js")
 const fs = require("fs");
 client.commands = new Discord.Collection()
 //Notifys the owners of the bot being online!
@@ -164,6 +163,5 @@ const unknow4 = new Discord.MessageEmbed()
 	}
    })
   
-//Runner/Starter/server
-keepAlive()
+//Runner/Starter
 client.login("TOKEN")
